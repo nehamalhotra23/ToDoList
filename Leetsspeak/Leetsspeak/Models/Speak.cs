@@ -41,9 +41,11 @@ namespace Speak
         {
             static void Main()
         {
+            Console.WriteLine("Enter a sentence");
+            string userInput = Console.ReadLine();
             Generator newOne = new Generator();
-            Console.WriteLine(newOne.ReplaceLetters("Don't you love these String exercises? I do!"));
+            Console.WriteLine(newOne.ReplaceLetters(userInput));
             
         }
-        }
+    }
 }
