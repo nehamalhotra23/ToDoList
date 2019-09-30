@@ -6,7 +6,7 @@ namespace Speak
 {
     public class Generator
     {
-        public void ReplaceLetters(string words)
+        public char[] ReplaceLetters(string words)
         {
             char[] array = words.ToCharArray();
             // string newString = "";
@@ -33,10 +33,8 @@ namespace Speak
                         array[j] = 'z';
                     }
                 }
-                
             }
-            Console.WriteLine(array); 
-            
+            return array;
         }
     }
     class Program
@@ -44,7 +42,8 @@ namespace Speak
             static void Main()
         {
             Generator newOne = new Generator();
-            newOne.ReplaceLetters("Don't you love these String exercises? I do!");
+            Console.WriteLine(newOne.ReplaceLetters("Don't you love these String exercises? I do!"));
+            
         }
         }
 }
