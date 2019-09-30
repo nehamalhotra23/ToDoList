@@ -14,18 +14,25 @@ namespace Speak
             {
                 if(array[i] == 'o')
                 {
-                    array[i] = '0';
+                    array[i] = 'O';
+                } else if(array[i] == 'e') 
+                {
+                    array[i] = '3';
+                } else if(array[i] == 't') 
+                {
+                    array[i] = '7';
+                } else if(array[i] == 'I') 
+                {
+                    array[i] = '1';
+                } 
+
+
+                for (var j = 1; j<array.Length; j++) {
+                    if (array[j] == 's') 
+                    {
+                        array[j] = 'z';
+                    }
                 }
-                
-                
-                // newString += letter.ToString().Replace("o","O");
-                // newString += letter.ToString().Replace("e","3");
-                //    Console.WriteLine(letter.ToString().Replace("o","0"));
-                //    Console.WriteLine(letter.ToString().Replace("e","3"));
-                //    Console.WriteLine(letter.ToString().Replace("I","1"));
-                //    Console.WriteLine(letter.ToString().Replace("t", "7"));
-                   // if s is the first letter of the word then replace it with a Z
-                    // Console.WriteLine(newString);
                 
             }
             Console.WriteLine(array); 
@@ -37,7 +44,7 @@ namespace Speak
             static void Main()
         {
             Generator newOne = new Generator();
-            newOne.ReplaceLetters("epicodus");
+            newOne.ReplaceLetters("Don't you love these String exercises? I do!");
         }
         }
 }
